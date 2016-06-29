@@ -1,0 +1,34 @@
+{
+  "name": "Event",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "startAt": {
+      "type": "date",
+      "required": true
+    },
+    "endsAt": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accounts": {
+      "type": "hasAndBelongsToMany",
+      "model": "Account",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
